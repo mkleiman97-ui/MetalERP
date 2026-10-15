@@ -1,0 +1,179 @@
+Unificación productos + materiales — 2026-10-01 18:00:29
+Base: C:\Compartida\Sistema de Gestión de Calidad\MetalERP\MetalERP - V3 REV\database\metalerp.db
+
+Backup completo previo: C:\Compartida\Sistema de Gestión de Calidad\MetalERP\MetalERP - V3 REV\database\metalerp_backup_pre_unificacion_20261001_180029.db
+
+=== RESUMEN ===
+Productos (ficha de proceso): 576
+Materiales (inventario):      74
+  de los cuales gemelos de stock de un producto: 62
+Artículos en la tabla unificada: 588
+Materiales que cambian de id: 64 (gemelos que toman el id de su producto + choques de id)
+Códigos renombrados por choque: 1
+
+=== VERIFICACIÓN ===
+  categorias_maquina                 antes=5      después=5
+  categorias_producto                antes=2      después=2
+  clientes                           antes=24     después=24
+  configuracion                      antes=11     después=11
+  cotizaciones_compra                antes=3      después=3
+  empleado_maquinas                  antes=0      después=0
+  empleados                          antes=51     después=51
+  herramientas_operacion             antes=0      después=0
+  lotes                              antes=65     después=65
+  mantenimiento_plan                 antes=1      después=1
+  maquina_reemplazos                 antes=0      después=0
+  maquinas                           antes=74     después=74
+  materiales                         antes=74     después=588
+  movimientos                        antes=338    después=338
+  novedades_eliminadas               antes=7      después=7
+  novedades_produccion               antes=1638   después=1638
+  operacion_materiales               antes=3      después=3
+  orden_cliente_item_ots             antes=2      después=2
+  orden_lotes                        antes=0      después=0
+  orden_materiales                   antes=5      después=5
+  orden_operacion_materiales         antes=4      después=4
+  orden_operaciones                  antes=328    después=328
+  ordenes                            antes=82     después=82
+  ordenes_cliente                    antes=1      después=1
+  ordenes_cliente_items              antes=2      después=2
+  ordenes_compra                     antes=1      después=1
+  ordenes_compra_items               antes=1      después=1
+  ordenes_tercerizado                antes=0      después=0
+  presupuestos                       antes=0      después=0
+  proceso_operaciones                antes=211    después=211
+  producto_clientes                  antes=0      después=0
+  producto_versiones                 antes=363    después=363
+  productos                          antes=576    después=(vista)
+  pronostico_item_ots                antes=0      después=0
+  pronostico_venta_items             antes=0      después=0
+  pronosticos_venta                  antes=0      después=0
+  proveedor_materiales               antes=2      después=2
+  proveedor_servicios                antes=0      después=0
+  proveedores                        antes=11     después=11
+  recepciones                        antes=0      después=0
+  remito_items                       antes=0      después=0
+  remitos                            antes=0      después=0
+  requerimientos_productivos         antes=2      después=2
+  roles                              antes=5      después=5
+  solicitudes_compra                 antes=9      después=9
+  tickets_reparacion                 antes=0      después=0
+  trabajo_no_productivo              antes=417    después=417
+  usuario_permisos                   antes=113    después=113
+  usuarios                           antes=6      después=6
+  Stock total antes=38169.5 después=38169.5
+  Novedades (cantidad, Σ producido, Σ minutos): (1638, 351707.0, 466509.0)
+  Versiones de proceso con material remapeado: 0
+  Todas las verificaciones OK.
+
+=== DECISIONES AUTOMÁTICAS ===
+ - Producto id=764: el gemelo de stock tenía el código 'M60.03243-2-PT2'; queda el código del producto 'M60.03243-2'.
+ - Material id=5 'SAE4140 RED LAM Ø95.00' cambia a id=2276 (su id coincidía con el de un producto).
+ - Material id=6 'SAE4140 RED TREF Ø40.00' cambia a id=2277 (su id coincidía con el de un producto).
+ - CHOQUE DE CÓDIGO: el material id=94 'M60.03243-2' (Material, CHAPA 300X500 FIJACION TANQUE) tenía el mismo código que el producto 'M60.03243-2'. El producto conserva el código; el material pasa a 'M60.03243-2-MP'.
+
+=== PARA REVISAR (no bloquean) ===
+ - Producto 'NO USAR-NO USAR' (BORRAR LUEGO) no tiene cliente asignado. Queda como 'Producto terminado' (el tipo es explícito).
+ - Producto 'PRC7HAF--PREMEC' (BLANK POLISHED ROD COUPLING 7/8) no tiene cliente asignado. Queda como 'Producto terminado' (el tipo es explícito).
+ - Producto 'D10-H454L--00' (COLLAR) no tiene cliente asignado. Queda como 'Producto terminado' (el tipo es explícito).
+ - Producto 'D10-H454L-00 (COLLAR)' (COLLAR) no tiene cliente asignado. Queda como 'Producto terminado' (el tipo es explícito).
+ - Códigos casi iguales (solo difieren en mayúsculas/espacios), posibles duplicados: '23287HS2' | '23287hs2'
+ - Códigos casi iguales (solo difieren en mayúsculas/espacios), posibles duplicados: 'D10-F4191-01' | 'D10-F4191-01 '
+ - Stock sin lote aprobado (dato previo, no se modifica): 'X2442.A382-7' stock=1303.5 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'C8HAS-PREMEC' stock=1525.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'A01.00450-9' stock=970.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'C7HAF-PREMEC' stock=76.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'DS9-F5383-00' stock=815.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'M14.34001-9' stock=146.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'BTH-F612E-00' stock=7.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'DS9-F5377-00' stock=2742.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'B7U-F5377-00' stock=667.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): '90179-25615' stock=2841.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'M10.14045-0' stock=2815.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'M10.14012-5' stock=1750.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'A01.01493-1' stock=21.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): '23312HS2' stock=9.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'T97.17071-0' stock=1548.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'M14.33359-0' stock=1219.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'D10-H454L-00 (COLLAR)' stock=211.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'DS9-F5371-00' stock=1008.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'A01.00207-4' stock=743.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'C7TAF-PREMEC' stock=2179.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'M14.34000-6' stock=432.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'SCTAF-76-PREMEC' stock=195.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'PRC8HAS-PREMEC' stock=401.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'AP-FJO-288-0001' stock=25.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'M10.19031-1' stock=892.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'M60.03243-2-PT2' stock=414.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'B7J-F3317-00' stock=294.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'AP-FJO-313-0001' stock=25.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'BTH-F3857-00' stock=270.0 vs aprobado en lotes=0.0.
+ - Stock sin lote aprobado (dato previo, no se modifica): 'X9301.A019-0' stock=12426.0 vs aprobado en lotes=0.0.
+
+=== MAPA DE IDS DE MATERIALES (viejo -> nuevo) ===
+  5 -> 2276  (SAE4140 RED LAM Ø95.00)
+  6 -> 2277  (SAE4140 RED TREF Ø40.00)
+  8 -> 5  (X2442.A382-7)
+  9 -> 6  (X2433.A158-1)
+  10 -> 7  (C8HAS-PREMEC)
+  11 -> 8  (A01.00450-9)
+  12 -> 9  (X1413.A090-6)
+  13 -> 10  (M14.33359-060)
+  14 -> 11  (C7HAF-PREMEC)
+  15 -> 12  (DS9-F5383-00)
+  16 -> 13  (M14.34001-9)
+  17 -> 14  (B6H F612L-00)
+  18 -> 15  (MI-001)
+  19 -> 16  (23287HS2)
+  20 -> 17  (NO USAR-NO USAR)
+  21 -> 18  (B6H-F5522-00)
+  22 -> 19  (D00-109432-000)
+  23 -> 20  (DS9-F194J-00)
+  24 -> 21  (BTH-F612E-00)
+  27 -> 22  (BTH-F5875-00)
+  30 -> 23  (DS9-F5377-00)
+  32 -> 24  (A01.01761-2)
+  34 -> 25  (X2442.A347-5)
+  36 -> 26  (D10-F4191-01 )
+  38 -> 27  (B7U-F5377-00)
+  40 -> 28  (BUC-F5886-00)
+  42 -> 29  (D10-F4191-01)
+  44 -> 30  (90179-25615)
+  46 -> 31  (A01.01074-6)
+  48 -> 32  (PRC7HAF-PREMEC)
+  50 -> 33  (SCHAF-76-PREMEC)
+  52 -> 34  (M10.14045-0)
+  54 -> 35  (D10-F4191--01)
+  56 -> 36  (M10.14012-5)
+  58 -> 37  (A01.01493-1)
+  60 -> 38  (23287hs2)
+  62 -> 39  (A01.00206-6)
+  64 -> 40  (10)
+  65 -> 41  (23312HS2)
+  67 -> 42  (M10.14013-8)
+  69 -> 43  (T97.17071-0)
+  72 -> 1043  (90387-10835)
+  76 -> 725  (M14.33359-0)
+  77 -> 734  (X2433.A093-2)
+  78 -> 2268  (D10-H454L--00)
+  79 -> 2269  (D10-H454L-00 (COLLAR))
+  80 -> 2270  (B7J-F334G-00)
+  81 -> 2271  (B7J-F2365-10)
+  84 -> 1056  (D10-H454L-00)
+  85 -> 1044  (DS9-F5371-00)
+  86 -> 698  (A01.00207-4)
+  87 -> 2272  (C7TAF-PREMEC)
+  88 -> 2273  (A01.05335-1)
+  89 -> 727  (M14.34000-6)
+  90 -> 2274  (SCTAF-76-PREMEC)
+  91 -> 1114  (PRC8HAS-PREMEC)
+  92 -> 1110  (AP-FJO-288-0001)
+  93 -> 717  (M10.19031-1)
+  97 -> 764  (M60.03243-2-PT2)
+  98 -> 1066  (B7J-F3317-00)
+  99 -> 1111  (AP-FJO-313-0001)
+  100 -> 1067  (BTH-F3857-00)
+  101 -> 755  (X9301.A019-0)
+  104 -> 2275  (VARILLA ROSCADA 5/16 -18)
+
+Migración confirmada (COMMIT).
