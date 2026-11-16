@@ -1,0 +1,50 @@
+{
+  "metalerp_url": "http://localhost:5000",
+  "api_key": "mp_HMcOfdzfdP_NdmFv9Z1UysHNb9vzqbJB",
+  "intervalo_min": 60,
+  "puerto": 5100,
+  "parada_seg": 180,
+  "senal_token": "",
+  "lectores": [
+    {
+      "maquina": "T5",
+      "tipo": "fanuc",
+      "ip": "192.168.10.200",
+      "puerto": 8193,
+      "multiplo": 1,
+      "activo": true
+    },
+    {
+      "maquina": "T1",
+      "tipo": "fanuc",
+      "ip": "192.168.10.201",
+      "puerto": 8193,
+      "multiplo": 1,
+      "activo": true
+    },
+    {
+      "maquina": "T2",
+      "tipo": "fanuc",
+      "ip": "192.168.10.202",
+      "puerto": 8193,
+      "multiplo": 1,
+      "activo": true
+    },
+    {
+      "maquina": "T4",
+      "tipo": "fanuc",
+      "ip": "192.168.10.203",
+      "puerto": 8193,
+      "multiplo": 1,
+      "activo": true
+    }
+  ],
+  "ftp_activo": true,
+  "ftp_puerto": 21,
+  "ftp_clave": "cnc1627",
+  "variable_parada": 500,
+  "base_parada": 9500,
+  "codigos_parada": [],
+  "leer_alarmas": true,
+  "alarma_min_seg": 1
+}

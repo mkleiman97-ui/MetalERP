@@ -1,0 +1,8 @@
+{
+  "metalerp_url": "http://localhost:5000",
+  "api_key": "mp_6_r4L6Zs9k2ssn-A5mZfzDtSsbGx0piF",
+  "intervalo_min": 60,
+  "puerto": 5100,
+  "parada_seg": 180,
+  "senal_token": ""
+}
